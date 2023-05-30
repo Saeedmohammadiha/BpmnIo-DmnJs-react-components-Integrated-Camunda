@@ -7,11 +7,11 @@ each component has properties panel and uses Camunda
 
 In the project directory, you can run:
 
-### `npm install`
+`npm install`
 
 it installs dependencies
 
-### `npm start`
+`npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -42,13 +42,15 @@ Use the component in your code:
 
 The BpmnIo component accepts the following props:
 
-- ```xml' (string, optional): The XML data representing the BPMN diagram to display. If not provided, an empty diagram will be shown.``
+- **xml** (string, optional): The XML data representing the BPMN diagram to display. If not provided, an empty diagram will be shown.``
 
-- `` downloadButton'  (boolean, optional): Whether to display the download button. Defaults to `true ``.
+- **downloadButton**  (boolean, optional): Whether to display the download button. Defaults to `true `.
 
-- `` importBpmn'  (boolean, optional): Whether to display the import button. Defaults to  `true ``.
+- **importBpmn**  (boolean, optional): Whether to display the import button. Defaults to  `true `.
 
-- `` readOnly'  (boolean, optional): Whether to enable read-only mode. Defaults to  `true ``.
+- **readOnly**  (boolean, optional): Whether to enable read-only mode. Defaults to  `true `.
+
+
 
 ## Methods
 
@@ -66,9 +68,12 @@ bpmnRef.current.saveModelHandler();
 <BpmnIo ref={bpmnRef} />
 ```
 
+
 # Dmnjs Component
 
 The Dmnjs component allows users to view and edit DMN (Decision Model and Notation) diagrams. It provides similar functionality to the BpmnIo component but tailored for DMN diagrams.
+
+
 
 # Usage
 
@@ -80,17 +85,21 @@ Use the component in your code:
 
 `<Dmnjs xml={xmlData} readOnly={false} />`
 
+
+
 ## Props
 
 The Dmnjs component accepts the following props:
 
-- ```xml' (string, optional): The XML data representing the Dmn diagram to display. If not provided, an empty diagram will be shown.``
+-  **xml** (string, optional): The XML data representing the Dmn diagram to display. If not provided, an empty diagram will be shown.
 
-- `` downloadButton'  (boolean, optional): Whether to display the download button. Defaults to `true ``.
+-  **downloadButton**  (boolean, optional): Whether to display the download button. Defaults to `true `.
 
-- `` importDmn'  (boolean, optional): Whether to display the import button. Defaults to  `true ``.
+-  **importDmn**  (boolean, optional): Whether to display the import button. Defaults to  `true `.
 
-- `` readOnly'  (boolean, optional): Whether to enable read-only mode. Defaults to  `true ``.
+-  **readOnly**  (boolean, optional): Whether to enable read-only mode. Defaults to  `true `.
+
+
 
 ## Methods
 
@@ -107,6 +116,8 @@ dmnRef.current.saveModelHandler();
 // Use the ref in the component
 <Dmnjs ref={dmnRef} />
 ```
+
+
 
 ## Blob to Document Conversion
 
@@ -128,6 +139,8 @@ axios
 }
  ```
 
+
+
 ## Importing and Exporting Diagrams
 
 The BpmnIo and Dmnjs components provide functionality for importing and exporting diagrams. They include import buttons for loading XML files, as well as download buttons for saving the diagrams as XML files.
@@ -138,9 +151,13 @@ Exporting Diagrams
 
 To export a diagram, click on the download button. The diagram will be downloaded as an XML file, allowing you to save it to your local machine.
 
+
+
 ## Styling
 
 The BpmnIo and Dmnjs components can be customized using CSS styles. You can modify the appearance of the buttons, container, and properties panel to match your application's design.
+
+
 
 ## Camunda Integration
 
