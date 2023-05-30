@@ -18,15 +18,25 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 
 
+## BpmnIo Component
+
+The BpmnIo component allows users to view and edit BPMN (Business Process Model and Notation) diagrams. It provides the following features:
+
+- Rendering BPMN diagrams from XML data.
+- Importing BPMN diagrams from XML files.
+- Downloading the BPMN diagram as an XML file.
+- Enabling or disabling read-only mode.
+- Displaying a properties panel for editing BPMN elements.
+
 ## Usage
 
 Import the BpmnIo component:
 
-### `import BpmnIo from './BpmnIo';`
+`import BpmnIo from './BpmnIo';`
 
 Use the component in your code:
 
-### `<BpmnIo xml={xmlData} readOnly={false} />`
+`<BpmnIo xml={xmlData} readOnly={false} />`
 
 ## Props
 
