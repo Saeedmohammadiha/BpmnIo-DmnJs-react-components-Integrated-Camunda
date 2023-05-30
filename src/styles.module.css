@@ -1,0 +1,45 @@
+.propview {
+  height: 84vh;
+  max-height: 85vh;
+  overflow-x: auto;
+  background: #f8f8f8;
+  border-left: solid 1px #ccc;
+  direction: ltr;
+}
+
+.container {
+  flex: 1;
+  height: 100%;
+  direction: ltr;
+}
+
+.diagramContainer {
+  display: flex;
+  height: 85vh;
+  border: 3px solid blue;
+  margin-top: 10px;
+  overflow-x: auto;
+}
+
+.buttonsContainer{
+  display: flex;
+  align-items: center;
+}
+.downloadButton {
+  text-decoration: none;
+  color: black;
+  font-size: inherit;
+}
+
+.Button {
+  text-decoration: none;
+  background-color: #ccc;
+  border: none;
+  border-radius: 5px;
+  padding: 8px;
+  margin: 15px;
+}
+.Button:hover {
+  cursor: pointer;
+}
+
