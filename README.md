@@ -32,7 +32,7 @@ Use the component in your code:
 
 The BpmnIo component accepts the following props:
 
-- `xml' (string, optional): The XML data representing the BPMN diagram to display. If not provided, an empty diagram will be shown.
+- ```xml' (string, optional): The XML data representing the BPMN diagram to display. If not provided, an empty diagram will be shown.``
 
 - `` downloadButton'  (boolean, optional): Whether to display the download button. Defaults to `true ``.
 
@@ -44,17 +44,17 @@ The BpmnIo component accepts the following props:
 
 The BpmnIo component exposes a method `saveModelHandler` that can be accessed through a ref:
 
-    ```js
-    const bpmnRef = useRef();
+```js
+const bpmnRef = useRef();
 
-    // Access the saveModelHandler method
-    const saveBpmnModel = () => {
-    bpmnRef.current.saveModelHandler();
-    };
+// Access the saveModelHandler method
+const saveBpmnModel = () => {
+bpmnRef.current.saveModelHandler();
+};
 
-    // Use the ref in the component
-    <BpmnIo ref={bpmnRef} />
-    ```
+// Use the ref in the component
+<BpmnIo ref={bpmnRef} />
+```
 
 # Dmnjs Component
 
@@ -74,7 +74,7 @@ Use the component in your code:
 
 The Dmnjs component accepts the following props:
 
-- `xml' (string, optional): The XML data representing the Dmn diagram to display. If not provided, an empty diagram will be shown.
+- ```xml' (string, optional): The XML data representing the Dmn diagram to display. If not provided, an empty diagram will be shown.``
 
 - `` downloadButton'  (boolean, optional): Whether to display the download button. Defaults to `true ``.
 
@@ -86,38 +86,37 @@ The Dmnjs component accepts the following props:
 
 The Dmnjs component exposes a method saveModelHandler that can be accessed through a ref:
 
-    ```js
-    const dmnRef = useRef();
+```js
+const dmnRef = useRef();
 
-    // Access the saveModelHandler method
-    const saveDmnModel = () => {
-    dmnRef.current.saveModelHandler();
-    };
+// Access the saveModelHandler method
+const saveDmnModel = () => {
+dmnRef.current.saveModelHandler();
+};
 
-    // Use the ref in the component
-    <Dmnjs ref={dmnRef} />
-    ```
+// Use the ref in the component
+<Dmnjs ref={dmnRef} />
+```
 
 ## Blob to Document Conversion
 
 Both the BpmnIo and Dmnjs components use a helper function `blobToDocument` for converting a Blob object to a document format. It is used to load XML files and open them in the respective diagram editors.
 
-    ```js
-    function blobToDocument(blob, callback) {
-    const url = URL.createObjectURL(blob);
-    axios
-        .get(url, {
-            responseType: 'xml',
-        })
-        .then((response) => {
-            callback(response.data);
-        })
-        .catch((error) => {
-             console.error(error);
-        });
-    }
-
-    ```
+```js
+function blobToDocument(blob, callback) {
+const url = URL.createObjectURL(blob);
+axios
+    .get(url, {
+          responseType: 'xml',
+    })
+    .then((response) => {
+        callback(response.data);
+    })
+    .catch((error) => {
+         console.error(error);
+    });
+}
+ ```
 
 ## Importing and Exporting Diagrams
 
